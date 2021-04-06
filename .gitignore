@@ -1,0 +1,7 @@
+# Generated Files
+__pycache__/
+.vscode/
+.ipynb_checkpoints/
+
+# THE DATA IS TOO BIG
+yelp_academic_dataset_review.json
