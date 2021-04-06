@@ -14,5 +14,15 @@ def read_spark_data(data_path):
 
 
 if __name__ == "__main__":
+  # use this main to test pyspark compatibility and data output.
   tmp_df = read_spark_data("../data/yelp_academic_dataset_review.json")
   print(tmp_df.show(2))
+
+  # expected output:
+  # +--------------------+--------------------+--------------------+-----+--------------------+
+  # |           review_id|             user_id|         business_id|stars|                text|
+  # +--------------------+--------------------+--------------------+-----+--------------------+
+  # |lWC-xP3rd6obsecCY...|ak0TdVmGKo4pwqdJS...|buF9druCkbuXLX526...|  4.0|Apparently Prides...|
+  # |8bFej1QE5LXp4O05q...|YoVfDbnISlW0f7abN...|RA4V8pr014UyUbDvI...|  4.0|This store is pre...|
+  # +--------------------+--------------------+--------------------+-----+--------------------+
+  # only showing top 2 rows
