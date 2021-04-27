@@ -1,0 +1,6 @@
+ipykernel
+matplotlib
+pandas
+nltk
+sklearn
+fire

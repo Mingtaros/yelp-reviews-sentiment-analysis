@@ -10,6 +10,12 @@ This data from dataset will be updated from time-to-time
 2. Download the data [here](https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_review.json)
 3. Put the data in data folder with `yelp_academic_dataset_review.json` name format
 
+Running the model
+1. Build docker image:
+    docker build --tag simple-sentiment -f dockerfile .
+
+2. Run main.py inside docker container, use `python main.py --help` for help
+
 ## Requirements
 Python Pips:
 - pyspark-3.1.1
