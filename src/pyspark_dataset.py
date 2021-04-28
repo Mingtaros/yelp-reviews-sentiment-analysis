@@ -38,7 +38,7 @@ def preprocess(dataframe):
   )
 
   # split into train and validation
-  train_df, val_df = df_clean.randomSplit([0.8, 0.2], seed = 13517)
+  train_df, val_df = df_clean.randomSplit([0.98, 0.02], seed = 13517)
 
   ### PIPELINE
   # binning the review stars to be labels
