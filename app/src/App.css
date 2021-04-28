@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_large_assets/65e6a224ada4/assets/img/home/hero_photos/cz8iYo13MpBBGlFLlkA8Sw.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.header {
+  color: white;
+  font-family: "Roboto";
+  font-size: xx-large;
+  margin: 0px 0px 0px 0px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.review-textarea {
+  resize: none;
+  border-radius: 12px;
+  padding: 5pt;
+  font-family: "Georgia";
+  font-size: medium;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.submit-button {
+  background-color: white;
+  border: 2px solid #4caf50;
+  color: black;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.submit-button:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.sentiment {
+  font-family: "Roboto";
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: white;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
