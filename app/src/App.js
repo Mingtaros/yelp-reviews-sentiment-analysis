@@ -7,6 +7,7 @@ class ReviewInput extends React.Component {
     this.state = {
       value: "",
       sentiment: "",
+      error: null,
       showSentiment: false,
     };
 
@@ -19,10 +20,27 @@ class ReviewInput extends React.Component {
   }
 
   handleSubmit(event) {
-    this.setState({
-      sentiment: "some sentiment",
-      showSentiment: true,
-    });
+    fetch("http://926d0e1ae5e1.ngrok.io" /* insert endpoint here */, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: this.state.value }),
+    })
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            value: this.state.value,
+            sentiment: result.label,
+            showSentiment: true,
+          });
+        },
+        (error) => {
+          this.setState({
+            error,
+            showSentiment: true,
+          });
+        }
+      );
     event.preventDefault();
   }
 
@@ -51,7 +69,11 @@ class ReviewInput extends React.Component {
 
         {this.state.showSentiment ? (
           <div>
-            <h1 className='sentiment'>{this.state.sentiment}</h1>
+            {this.state.error ? (
+              <h1 className="sentiment">Error</h1>
+            ) : (
+              <h1 className="sentiment">{this.state.sentiment}</h1>
+            )}
           </div>
         ) : null}
       </div>
