@@ -20,7 +20,7 @@ class ReviewInput extends React.Component {
   }
 
   handleSubmit(event) {
-    fetch("http://926d0e1ae5e1.ngrok.io" /* insert endpoint here */, {
+    fetch("http://6dce216e6332.ngrok.io" /* insert endpoint here */, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: this.state.value }),
@@ -47,6 +47,7 @@ class ReviewInput extends React.Component {
   render() {
     return (
       <div>
+        <div className="top-header-margin"></div>
         <form onSubmit={this.handleSubmit}>
           <h2 className="header">Enter your review here</h2>
           <label>

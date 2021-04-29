@@ -11,15 +11,21 @@
   background-position: center center;
 }
 
+.top-header-margin {
+  height: 30%;
+  width: 100%;
+  padding: 100px 0px 0px 100px;
+}
+
 .header {
   color: white;
   font-family: "Roboto";
   font-size: xx-large;
   margin: 0px 0px 0px 0px;
-  position: absolute;
+  position: relative;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   text-align: center;
 }
 
@@ -29,10 +35,10 @@
   padding: 5pt;
   font-family: "Georgia";
   font-size: medium;
-  position: absolute;
+  /*   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   text-align: center;
 }
 
@@ -47,10 +53,10 @@
   font-weight: 700;
   border-radius: 12px;
   transition-duration: 0.4s;
-  position: absolute;
+  /*   position: absolute;
   top: 51%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   text-align: center;
 }
 
